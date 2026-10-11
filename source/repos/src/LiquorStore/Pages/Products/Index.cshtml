@@ -1,1 +1,14 @@
-@page\n@model dynamic\n<h1>Product Catalog</h1>\n<ul>\n    <li>Sample Whiskey - </li>\n    <li>Sample Vodka - </li>\n</ul>
+@page
+@model LiquorStore.Pages.Products.IndexModel
+
+<h1>Product Catalog</h1>
+
+@if (!string.IsNullOrEmpty(Model.Category))
+{
+    <p>Showing products for category: <strong>@Model.Category</strong></p>
+}
+
+<ul>
+    <li>Sample Whiskey</li>
+    <li>Sample Vodka</li>
+</ul>
